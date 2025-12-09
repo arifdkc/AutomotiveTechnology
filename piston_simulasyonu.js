@@ -128,3 +128,32 @@ function determineStroke(angle) {
     chamberBg.style.backgroundColor = "rgba(100, 100, 100, 0.4)";
   }
 }
+document.addEventListener('DOMContentLoaded', function() {
+    // Gerekli elementleri seç
+    const menuToggle = document.getElementById('mobile-menu'); // Hamburger ikon
+    const sidebar = document.getElementById('sidebar'); // Sidebar div'i
+    const closeBtn = document.getElementById('close-btn'); // Yeni Kapatma İkonu
+
+    // Sidebar'ı kapatma fonksiyonu
+    function closeSidebar() {
+        sidebar.classList.remove('open');
+        menuToggle.classList.remove('active');
+    }
+
+    // 1. Hamburger ikonuna tıklama olayı (Açar/Kapatır)
+    menuToggle.addEventListener('click', function() {
+        sidebar.classList.toggle('open');
+        menuToggle.classList.toggle('active');
+    });
+
+    // 2. Yeni Kapatma butonuna tıklama olayı (Sadece Kapatır)
+    closeBtn.addEventListener('click', closeSidebar);
+
+
+    // 3. Sidebar'daki bir bağlantıya tıklandığında menüyü kapatmak için
+    const sidebarLinks = document.querySelectorAll('.sidebar-links a');
+    
+    sidebarLinks.forEach(link => {
+        link.addEventListener('click', closeSidebar);
+    });
+});

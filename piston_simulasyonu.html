@@ -1,19 +1,31 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>4 Zamanlı Motor Simülasyonu (Eğitim Modu)</title>
     <link rel="stylesheet" href="piston_simulasyonu.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
+
     <nav class="navbar">
         <div class="container nav-container">
             <div class="logo">
                 <i class="fas fa-car-battery"></i> Otomotiv Teknolojileri
             </div>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Ana Sayfa</a></li>
+
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-links" id="main-nav">
+                <li><a href="index.html">Ana Sayfa</a></li>
                 <li><a href="piston_simulasyonu.html" class="active">Simülasyonlar</a></li>
                 <li><a href="quattro_vs_xdrive.html">Otomotiv Teknolojileri</a></li>
                 <li><a href="otto.html">Blog & Analiz</a></li>
@@ -21,6 +33,21 @@
             </ul>
         </div>
     </nav>
+
+    <div class="sidebar" id="sidebar">
+        <div class="close-btn" id="close-btn">&times;</div>
+
+        <div class="sidebar-content">
+            <ul class="sidebar-links">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="piston_simulasyonu.html" class="active">Simülasyonlar</a></li>
+                <li><a href="quattro_vs_xdrive.html">Otomotiv Teknolojileri</a></li>
+                <li><a href="otto.html">Blog & Analiz</a></li>
+                <li><a href="vocabulary.html">Teknoloji Sözlüğü</a></li>
+            </ul>
+        </div>
+    </div>
+
 
     <div class="controls">
         <button class="btn-start" onclick="startEngine()">Başlat</button>
@@ -32,7 +59,7 @@
 
     <div class="engine-container">
         <div class="chamber-bg" id="chamberBg"></div>
-        
+
         <div class="valves">
             <div class="valve intake" id="valveIntake"></div>
             <div class="spark-plug">
@@ -45,7 +72,7 @@
             <div class="piston"></div>
             <div class="connecting-rod" id="conRod"></div>
         </div>
-        
+
         <div class="crankshaft"></div>
     </div>
 
@@ -58,4 +85,5 @@
     <script src="piston_simulasyonu.js"></script>
 
 </body>
-</html>  
+
+</html>
