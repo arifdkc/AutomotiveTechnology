@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otto Çevrimi ve Motor Teknolojileri</title>
+    <link rel="stylesheet" href="otto.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fas fa-car-battery"></i> Otomotiv Teknolojileri
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="piston_simulasyonu.html">Simülasyonlar</a></li>
+                <li><a href="quattro_vs_xdrive.html">Otomotiv Teknolojileri</a></li>
+                <li><a href="otto.html" class="active">Blog & Analiz</a></li>
+                <li><a href="vocabulary.html">Teknoloji Sözlüğü</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+
+        <h1>Otto Çevrimi ve Çalışma Prensipleri</h1>
+
+        <section>
+            <h2>1. Otto Çevrimi Nedir?</h2>
+            <p>
+                Otto çevrimi, yakıtın yanmasıyla oluşan yüksek basıncın pistonları aşağı-yukarı hareket ettirerek bu
+                doğrusal enerjiyi döner torka dönüştürdüğü bir motor türüdür.
+            </p>
+            <p>
+                Bu sistemde amaç; yakıtın yanmasıyla oluşan yüksek basıncın pistonları aşağı-yukarı hareket ettirmesini
+                sağlamak ve bu <strong>doğrusal enerjiyi (piston hareketi), krank mili aracılığıyla döner torka
+                    (tekerlek hareketi) dönüştürmektir.</strong>
+            </p>
+            <img src="4zamanlı_motor.jpg" alt="4 Zamanlı Motor Şeması"
+                style="width:100%; margin-top:15px; border-radius:8px;">
+        </section>
+
+        <section>
+            <h2>2. Benzinli ve Dizel Motor Farkları</h2>
+
+            <h3>Benzinli Motorun Çalışma Şekli (Otto Prensibi)</h3>
+            <p>
+                Benzinli motorlar, <strong>kıvılcım ile ateşleme (Spark Ignition)</strong> yapan içten yanmalı
+                motorlardır.
+                Yakıt ve hava karışımı silindir içine alınır, piston tarafından sıkıştırılır ve tepe noktasında
+                <strong>buji</strong> tarafından ateşlenir.
+                İdeal Otto çevriminde yanma, "sabit hacimde" gerçekleşen bir süreç olarak modellenir.
+            </p>
+
+            <h3>Dizel Motorun Çalışma Şekli (Dizel Çevrimi)</h3>
+            <p>
+                Dizel motorlar, <strong>yüksek basınç ile sıkıştırma (Compression Ignition)</strong> prensibiyle
+                çalışır.
+                Bu motorlarda buji yoktur. Silindire sadece hava alınır ve çok yüksek oranda sıkıştırılır.
+                Sıkışan havanın sıcaklığı o kadar artar ki, üzerine püskürtülen yakıt (mazot) kendi kendine patlar.
+            </p>
+
+            <h3>Özet Karşılaştırma Tablosu</h3>
+            <table>
+                <tr>
+                    <th>Özellik</th>
+                    <th>Benzinli (Otto)</th>
+                    <th>Dizel</th>
+                </tr>
+                <tr>
+                    <td><strong>Ateşleme</strong></td>
+                    <td>Buji Kıvılcımı ile</td>
+                    <td>Sıkışan havanın ısısıyla</td>
+                </tr>
+                <tr>
+                    <td><strong>Emilen Madde</strong></td>
+                    <td>Hava + Yakıt</td>
+                    <td>Sadece Hava</td>
+                </tr>
+                <tr>
+                    <td><strong>Sıkıştırma Oranı</strong></td>
+                    <td>Düşük (8:1 - 12:1)</td>
+                    <td>Yüksek (14:1 - 25:1)</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>3. Dört Zamanlı Çalışma Prensibi</h2>
+            <p>Günümüz araçlarının çoğu 4 zamanlı prensibe göre çalışır. Aşağıdaki başlıklara tıklayarak detayları
+                okuyabilirsiniz:</p>
+
+            <div class="tabs">
+                <button class="tablinks active" onclick="openCity(event, 'Emme')">1. Emme (Intake)</button>
+                <button class="tablinks" onclick="openCity(event, 'Sikistirma')">2. Sıkıştırma</button>
+                <button class="tablinks" onclick="openCity(event, 'Yanma')">3. Yanma (Güç)</button>
+                <button class="tablinks" onclick="openCity(event, 'Egzoz')">4. Egzoz</button>
+            </div>
+
+            <div id="Emme" class="tabcontent" style="display: block;">
+                <h3>1. Emme Zamanı (Intake)</h3>
+                <div class="card">
+                    <p>Piston aşağı inerken (Üst Ölü Noktadan Alt Ölü Noktaya) silindir içinde vakum oluşur. Emme supabı
+                        açıktır. Benzinli motorlarda <strong>hava-yakıt karışımı</strong>, dizel motorlarda ise
+                        <strong>sadece hava</strong> silindir içine emilir.
+                    </p>
+                    <img src="emme.png" alt="emme zamanı">
+                </div>
+            </div>
+            <div id="Sikistirma" class="tabcontent">
+                <h3>2. Sıkıştırma Zamanı (Compression)</h3>
+                <div class="card">
+                    <p>Emme ve egzoz supapları kapanır. Piston yukarı çıkarak içerideki karışımı veya havayı sıkıştırır.
+                        Bu
+                        işlem sırasında basınç ve sıcaklık hızla artar. Bu süreç termodinamikte "adyabatik" (ısı
+                        alışverişsiz) olarak modellenir.</p>
+                    <img src="sikistirma.png" alt="sıkıştırma zamanı"
+                        style="width:100%; margin-top:15px; border-radius:8px;">
+                </div>
+            </div>
+            <div id="Yanma" class="tabcontent">
+                <h3>3. Ateşleme ve Genleşme (Ignition & Power)</h3>
+                <div class="card">
+                    <p><strong>Motorun güç ürettiği tek zamandır.</strong> Piston tepe noktadayken; benzinli motorda
+                        buji
+                        çakar, dizel motorda yakıt püskürtülür. Oluşan patlama ile piston büyük bir kuvvetle aşağı
+                        itilir.
+                        Kimyasal enerji hareket enerjisine dönüşür.</p>
+                    <img src="patlama.png" alt="yanma zamanı"
+                        style="max-height:400px; margin-top:15px; border-radius:8px;">
+                </div>
+            </div>
+            <div id="Egzoz" class="tabcontent">
+                <h3>4. Egzoz Zamanı (Exhaust)</h3>
+                <div class="card">
+                    <p>Genleşme bittikten sonra piston tekrar yukarı çıkar. Egzoz supabı açılır ve yanmış atık gazlar
+                        pistonun itme kuvvetiyle egzoz manifoldundan dışarı atılır. Döngü tamamlanır.</p>
+                    <img src="egzoz.png" alt="egzoz zamanı" style="width:100%; margin-top:15px; border-radius:8px;">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Technical Vocabulary (Sözlük)</h2>
+            <div class="vocab-container">
+                <div class="vocab-card">Internal Combustion<br><small>İçten Yanmalı</small></div>
+                <div class="vocab-card">Spark Plug<br><small>Buji</small></div>
+                <div class="vocab-card">Stroke<br><small>Zaman / Vuruş</small></div>
+                <div class="vocab-card">Efficiency<br><small>Verimlilik</small></div>
+            </div>
+        </section>
+
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p class="developer">Geliştiren: <strong><a href="https://arifemredikici.com/">Arif Emre
+                                Dikici</a></strong> - Automotive Technology Student &
+                        Full-stack Developer</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/arifdkc" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/arif-emre-dikici-315545294/" class="social-link"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://arifemredikici.com/" class="social-link"><i class="fas fa-globe"></i></a>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>©2025 Automotive Technologies Blog created by <a href="https://arifemredikici.com/">Arif Emre
+                        Dikici</a> - Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+
+</body>
+
+</html>

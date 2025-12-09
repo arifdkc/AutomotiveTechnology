@@ -1,0 +1,300 @@
+/* --- Genel Ayarlar ve Değişkenler --- */
+:root {
+    --primary-color: #2563eb; /* Otomotiv Mavisi */
+    --primary-hover: #1d4ed8;
+    --bg-dark: #111827;       /* Ana Koyu Arkaplan */
+    --bg-card: #1f2937;       /* Kart Arkaplanı */
+    --text-main: #f3f4f6;     /* Beyaz Yazı */
+    --text-muted: #9ca3af;    /* Gri Yazı */
+    --border-color: #374151;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Navbar --- */
+.navbar {
+    background-color: #1f2937;
+    border-bottom: 1px solid var(--border-color);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: var(--text-muted);
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    background-color: var(--border-color);
+    color: var(--text-main);
+}
+
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+ul { list-style: none; }
+
+h1 {
+    color: var(--primary);
+    text-align: center;
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 15px;
+}
+
+h2 {
+    color: var(--primary);
+    margin-top: 30px;
+    border-left: 5px solid var(--secondary);
+    padding-left: 15px;
+}
+
+h3 {
+    color: #444;
+    margin-top: 20px;
+}
+
+p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Vurgu Kutuları */
+.info-box {
+    background: #eef2f7;
+    border-left: 4px solid var(--primary);
+    padding: 15px;
+    margin: 20px 0;
+    font-style: italic;
+}
+
+/* Tablo Stili */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--primary);
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* İngilizce Kartları */
+.vocab-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.vocab-card {
+    background: var( --bg-dark);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    flex: 1;
+    text-align: center;
+    min-width: 150px;
+}
+
+/* Tab Yapısı */
+.tabs {
+    overflow: hidden;
+    background-color: #f1f1f1;
+    border-radius: 5px 5px 0 0;
+    margin-top: 20px;
+}
+
+.tabs button {
+    background-color: var(--bg-dark);
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-weight: bold;
+    width: 25%;
+}
+
+.tabs button:hover {
+    background-color: #ddd;
+}
+
+.tabs button.active {
+    background-color: var(--secondary);
+    color:black;
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-top: none;
+    animation: fadeEffect 1s;
+    background: #fff;
+
+}
+.card{
+    display: flex;
+    justify-content: space-between;
+}
+.card img{
+   max-width: 250px;
+   min-width: 240px;
+    height: 450px;
+    margin-right: 20px;
+}
+.card p{
+    font-size: 30px;
+    line-height: 1.6;
+    max-width: 50%;
+}
+/* Footer */
+.footer {
+    background: #1a1a1a;
+    color: #ddd;
+    padding: 50px 0 20px;
+    margin-top: 50px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.footer-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.developer {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.developer strong {
+    color: var(--primary-hover);
+}
+
+.sources {
+    font-size: 0.95rem;
+    color: #aaa;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: #333;
+    color: white;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: #ff4d00;
+    transform: translateY(-5px);
+}
+
+.footer-copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    color: #888;
+    font-size: 0.9rem;
+}
+/* Mobil Uyum */
+@media screen and (max-width: 600px) {
+    .tabs button {
+        width: 100%;
+    }
+    .card {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card img{
+   width: 80%;
+    height: auto;
+}
+.card p{
+    max-width: 100%;
+    font-size: 20px;
+}
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
