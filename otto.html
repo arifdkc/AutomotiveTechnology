@@ -12,12 +12,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
-<body><nav class="navbar">
+<body>
+    <nav class="navbar">
         <div class="container nav-container">
             <div class="logo">
                 <i class="fas fa-car-battery"></i> Otomotiv Teknolojileri
             </div>
-            
+
             <div class="menu-toggle" id="mobile-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -25,28 +26,28 @@
             </div>
 
             <ul class="nav-links" id="main-nav">
-                <li><a href="index.html" >Ana Sayfa</a></li>
+                <li><a href="index.html">Ana Sayfa</a></li>
                 <li><a href="piston_simulasyonu.html">Simülasyonlar</a></li>
                 <li><a href="quattro_vs_xdrive.html">Otomotiv Teknolojileri</a></li>
-                <li><a href="otto.html"class="active">Blog & Analiz</a></li>
+                <li><a href="otto.html" class="active">Blog & Analiz</a></li>
                 <li><a href="vocabulary.html">Teknoloji Sözlüğü</a></li>
             </ul>
         </div>
     </nav>
 
-<div class="sidebar" id="sidebar">
-    <div class="close-btn" id="close-btn">&times;</div> 
-    
-    <div class="sidebar-content">
-        <ul class="sidebar-links">
-            <li><a href="index.html" >Ana Sayfa</a></li>
-            <li><a href="piston_simulasyonu.html">Simülasyonlar</a></li>
-            <li><a href="quattro_vs_xdrive.html">Otomotiv Teknolojileri</a></li>
-            <li><a href="otto.html"class="active">Blog & Analiz</a></li>
-            <li><a href="vocabulary.html">Teknoloji Sözlüğü</a></li>
-        </ul>
+    <div class="sidebar" id="sidebar">
+        <div class="close-btn" id="close-btn">&times;</div>
+
+        <div class="sidebar-content">
+            <ul class="sidebar-links">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="piston_simulasyonu.html">Simülasyonlar</a></li>
+                <li><a href="quattro_vs_xdrive.html">Otomotiv Teknolojileri</a></li>
+                <li><a href="otto.html" class="active">Blog & Analiz</a></li>
+                <li><a href="vocabulary.html">Teknoloji Sözlüğü</a></li>
+            </ul>
+        </div>
     </div>
-</div>
     <div class="main-container">
 
         <h1>Otto Çevrimi ve Çalışma Prensipleri</h1>
@@ -213,35 +214,35 @@
             document.getElementById(cityName).style.display = "block";
             evt.currentTarget.className += " active";
         }
-document.addEventListener('DOMContentLoaded', function() {
-    // Gerekli elementleri seç
-    const menuToggle = document.getElementById('mobile-menu'); // Hamburger ikon
-    const sidebar = document.getElementById('sidebar'); // Sidebar div'i
-    const closeBtn = document.getElementById('close-btn'); // Yeni Kapatma İkonu
+        document.addEventListener('DOMContentLoaded', function () {
+            // Gerekli elementleri seç
+            const menuToggle = document.getElementById('mobile-menu'); // Hamburger ikon
+            const sidebar = document.getElementById('sidebar'); // Sidebar div'i
+            const closeBtn = document.getElementById('close-btn'); // Yeni Kapatma İkonu
 
-    // Sidebar'ı kapatma fonksiyonu
-    function closeSidebar() {
-        sidebar.classList.remove('open');
-        menuToggle.classList.remove('active');
-    }
+            // Sidebar'ı kapatma fonksiyonu
+            function closeSidebar() {
+                sidebar.classList.remove('open');
+                menuToggle.classList.remove('active');
+            }
 
-    // 1. Hamburger ikonuna tıklama olayı (Açar/Kapatır)
-    menuToggle.addEventListener('click', function() {
-        sidebar.classList.toggle('open');
-        menuToggle.classList.toggle('active');
-    });
+            // 1. Hamburger ikonuna tıklama olayı (Açar/Kapatır)
+            menuToggle.addEventListener('click', function () {
+                sidebar.classList.toggle('open');
+                menuToggle.classList.toggle('active');
+            });
 
-    // 2. Yeni Kapatma butonuna tıklama olayı (Sadece Kapatır)
-    closeBtn.addEventListener('click', closeSidebar);
+            // 2. Yeni Kapatma butonuna tıklama olayı (Sadece Kapatır)
+            closeBtn.addEventListener('click', closeSidebar);
 
 
-    // 3. Sidebar'daki bir bağlantıya tıklandığında menüyü kapatmak için
-    const sidebarLinks = document.querySelectorAll('.sidebar-links a');
-    
-    sidebarLinks.forEach(link => {
-        link.addEventListener('click', closeSidebar);
-    });
-});
+            // 3. Sidebar'daki bir bağlantıya tıklandığında menüyü kapatmak için
+            const sidebarLinks = document.querySelectorAll('.sidebar-links a');
+
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', closeSidebar);
+            });
+        });
     </script>
 
 </body>

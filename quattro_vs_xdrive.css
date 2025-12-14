@@ -1,14 +1,20 @@
 /* Reset ve Temel Ayarlar */
 /* --- Genel Ayarlar ve Değişkenler --- */
 :root {
-    --primary-color: #2563eb; /* Otomotiv Mavisi */
+    --primary-color: #2563eb;
+    /* Otomotiv Mavisi */
     --primary-hover: #1d4ed8;
-    --bg-dark: #111827;       /* Ana Koyu Arkaplan */
-    --bg-card: #1f2937;       /* Kart Arkaplanı */
-    --text-main: #f3f4f6;     /* Beyaz Yazı */
-    --text-muted: #9ca3af;    /* Gri Yazı */
+    --bg-dark: #111827;
+    /* Ana Koyu Arkaplan */
+    --bg-card: #1f2937;
+    /* Kart Arkaplanı */
+    --text-main: #f3f4f6;
+    /* Beyaz Yazı */
+    --text-muted: #9ca3af;
+    /* Gri Yazı */
     --border-color: #374151;
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -25,7 +31,7 @@ body {
     color: #333;
     background-color: #f8f9fa;
     overflow-x: hidden;
-    
+
 }
 
 /* --- Yardımcı Sınıflar --- */
@@ -35,12 +41,19 @@ body {
     padding: 0 20px;
 }
 
-a { text-decoration: none; color: inherit; transition: 0.3s; }
-ul { list-style: none; }
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+ul {
+    list-style: none;
+}
 
 .navbar {
-    
-  background-color: #1f2937;
+
+    background-color: #1f2937;
     border-bottom: 1px solid var(--border-color);
     position: fixed;
     width: 100%;
@@ -67,7 +80,7 @@ ul { list-style: none; }
 .logo {
     font-size: 1.5em;
     font-weight: bold;
-          color: var(--primary-color);
+    color: var(--primary-color);
 }
 
 /* Masaüstü Navigasyon Linkleri (Varsayılan olarak görünür) */
@@ -117,7 +130,7 @@ ul { list-style: none; }
     /* Başlangıçta ekran dışı (gizli) */
     width: 250px;
     height: 100%;
-  
+
     background-color: #1f2937;
     border-bottom: 1px solid var(--border-color);
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
@@ -204,6 +217,7 @@ ul { list-style: none; }
         opacity: 0;
         transform: translateY(40px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -225,14 +239,29 @@ ul { list-style: none; }
     animation: fadeUp 1s ease forwards;
     animation-delay: 0.8s;
 }
+
 @keyframes slideLeft {
-    from { transform: translateX(-100%) scale(0.8); opacity: 0; }
-    to { transform: translateX(0) scale(1); opacity: 1; }
+    from {
+        transform: translateX(-100%) scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
 }
 
 @keyframes slideRight {
-    from { transform: translateX(100%) scale(0.8); opacity: 0; }
-    to { transform: translateX(0) scale(1); opacity: 1; }
+    from {
+        transform: translateX(100%) scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
 }
 
 .audi-car {
@@ -242,6 +271,7 @@ ul { list-style: none; }
 .bmw-car {
     animation: slideRight 1.2s ease forwards;
 }
+
 .scroll-animate {
     opacity: 0;
     transform: translateY(30px);
@@ -376,7 +406,8 @@ ul { list-style: none; }
     padding: 0 5%;
 }
 
-.audi-car, .bmw-car {
+.audi-car,
+.bmw-car {
     position: relative;
     width: 45%;
     height: 300px;
@@ -400,7 +431,8 @@ ul { list-style: none; }
     transition: transform 0.5s ease;
 }
 
-.audi-car:hover img, .bmw-car:hover img {
+.audi-car:hover img,
+.bmw-car:hover img {
     transform: scale(1.05);
 }
 
@@ -420,7 +452,8 @@ ul { list-style: none; }
 
 /* Yeni Eklenen Detay Bölümü */
 
-.audi, .bmw {
+.audi,
+.bmw {
     max-width: 1200px;
     margin: 0 auto 50px;
     padding: 30px;
@@ -429,7 +462,8 @@ ul { list-style: none; }
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
 }
 
-.audi h2, .bmw h2 {
+.audi h2,
+.bmw h2 {
     font-family: 'Montserrat', sans-serif;
     font-size: 2rem;
     color: #002b5c;
@@ -443,19 +477,22 @@ ul { list-style: none; }
     border-bottom: 3px solid #4a4a4a;
 }
 
-.audi p, .bmw p {
+.audi p,
+.bmw p {
     margin-bottom: 20px;
     color: #444;
     line-height: 1.7;
     font-size: 1.05rem;
 }
 
-.audi p:first-of-type, .bmw p:first-of-type {
+.audi p:first-of-type,
+.bmw p:first-of-type {
     font-weight: 500;
     color: #222;
 }
 
-.audi img, .bmw img {
+.audi img,
+.bmw img {
     display: block;
     max-width: 100%;
     height: auto;
@@ -465,7 +502,8 @@ ul { list-style: none; }
     transition: transform 0.3s ease;
 }
 
-.audi img:hover, .bmw img:hover {
+.audi img:hover,
+.bmw img:hover {
     transform: scale(1.02);
 }
 
@@ -479,7 +517,7 @@ ul { list-style: none; }
 
 section:not(.hero-section):not(.section):not(.footer) img:last-of-type {
     display: block;
- 
+
     margin: 40px auto 0;
     opacity: 0.8;
 }
@@ -632,6 +670,7 @@ section:not(.hero-section):not(.section):not(.footer) img:last-of-type {
 .bmw-card .feature i {
     color: #4a4a4a;
 }
+
 /* Teknik Detaylar Bölümü CSS */
 .technical-details-section {
     padding: 80px 0;
@@ -812,9 +851,12 @@ section:not(.hero-section):not(.section):not(.footer) img:last-of-type {
 .point-content {
     flex: 1;
 }
+
 .content-inner {
     display: flex;
+
 }
+
 .content-inner img {
     margin: 0 !important;
 }
@@ -867,7 +909,7 @@ section:not(.hero-section):not(.section):not(.footer) img:last-of-type {
     text-align: center;
     margin-top: 80px;
     padding: 40px;
- 
+
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
@@ -897,16 +939,16 @@ section:not(.hero-section):not(.section):not(.footer) img:last-of-type {
     .technical-details-section .section-title {
         font-size: 2.2rem;
     }
-    
+
     .system-header h3 {
         font-size: 1.6rem;
     }
-    
+
     .tech-point {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .point-icon {
         margin: 0 auto;
     }
@@ -916,29 +958,29 @@ section:not(.hero-section):not(.section):not(.footer) img:last-of-type {
     .technical-details-section {
         padding: 60px 0;
     }
-    
+
     .technical-details-section .section-title {
         font-size: 2rem;
     }
-    
+
     .system-header {
         flex-direction: column;
         text-align: center;
         gap: 15px;
     }
-    
+
     .system-header h3 {
         min-width: 100%;
     }
-    
+
     .system-content {
         padding: 20px;
     }
-    
+
     .brand-logos {
         padding: 30px 20px;
     }
-    
+
     .brand-logos img {
         max-width: 300px;
     }
@@ -948,33 +990,34 @@ section:not(.hero-section):not(.section):not(.footer) img:last-of-type {
     .technical-details-section .section-title {
         font-size: 1.8rem;
     }
-    
+
     .system-header {
         padding: 20px;
     }
-    
+
     .system-logo {
         width: 60px;
         height: 60px;
         font-size: 1.5rem;
     }
-    
+
     .system-header h3 {
         font-size: 1.4rem;
     }
-    
+
     .tech-point {
         padding: 20px;
     }
-    
+
     .point-content h4 {
         font-size: 1.2rem;
     }
-    
+
     .brand-logos img {
         max-width: 250px;
     }
 }
+
 /* Teknik Bölümü */
 .technical-section {
     background-color: #f8f9fa;
@@ -1114,11 +1157,13 @@ section:not(.hero-section):not(.section):not(.footer) img:last-of-type {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.front-left, .front-right {
+.front-left,
+.front-right {
     background: #666;
 }
 
-.rear-left, .rear-right {
+.rear-left,
+.rear-right {
     background: #444;
 }
 
@@ -1131,7 +1176,8 @@ section:not(.hero-section):not(.section):not(.footer) img:last-of-type {
     justify-content: center;
 }
 
-.torsen-diff, .transfer-case {
+.torsen-diff,
+.transfer-case {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1144,12 +1190,14 @@ section:not(.hero-section):not(.section):not(.footer) img:last-of-type {
     color: #333;
 }
 
-.torsen-diff i, .transfer-case i {
+.torsen-diff i,
+.transfer-case i {
     font-size: 2rem;
     margin-bottom: 8px;
 }
 
-.torsen-diff span, .transfer-case span {
+.torsen-diff span,
+.transfer-case span {
     font-size: 0.9rem;
     font-weight: 600;
 }
@@ -1324,45 +1372,46 @@ tbody td {
 tbody tr:hover {
     background-color: #f0f7ff;
 }
+
 .result-section {
-  padding: 60px 0;
-  background: #0f172a;
-  color: #f1f5f9;
+    padding: 60px 0;
+    background: #0f172a;
+    color: #f1f5f9;
 }
 
 .result-section h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 32px;
 }
 
 .result-section p {
-  max-width: 800px;
-  margin: 0 auto 20px auto;
-  line-height: 1.7;
-  text-align: center;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    line-height: 1.7;
+    text-align: center;
 }
 
 .result-section ul {
-  max-width: 600px;
-  margin: 0 auto 30px auto;
-  list-style: none;
-  padding: 0;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    list-style: none;
+    padding: 0;
 }
 
 .result-section li {
-  margin-bottom: 10px;
-  padding: 10px;
-  background: rgba(255,255,255,0.05);
-  border-left: 4px solid #38bdf8;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 4px solid #38bdf8;
 }
 
 .result-section .highlight {
-  text-align: center;
-  font-style: italic;
-  font-size: 18px;
-  margin-top: 20px;
-  color: #38bdf8;
+    text-align: center;
+    font-style: italic;
+    font-size: 18px;
+    margin-top: 20px;
+    color: #38bdf8;
 }
 
 /* Footer */
@@ -1449,10 +1498,12 @@ tbody tr:hover {
     z-index: 1000;
     display: none;
 }
+
 .scroll-top-btn i {
     padding-left: 18px;
     padding-top: 13px;
 }
+
 .scroll-top-btn:hover {
     background: #ff9900;
     transform: translateY(-5px);
@@ -1463,25 +1514,32 @@ tbody tr:hover {
     .hero-title {
         font-size: 2.8rem;
     }
-    
+
     .hero-subtitle {
         font-size: 1.2rem;
     }
-    
+
     .car-images {
         padding: 0 2%;
     }
-    
-    .audi-car, .bmw-car {
+
+    .audi-car,
+    .bmw-car {
         height: 250px;
     }
-    
+
     .section-title {
         font-size: 2.2rem;
     }
-    
-    .audi, .bmw {
+
+    .audi,
+    .bmw {
         padding: 25px;
+    }
+
+    .content-inner {
+        flex-direction: column;
+
     }
 }
 
@@ -1489,19 +1547,19 @@ tbody tr:hover {
     .hero-title {
         font-size: 2.3rem;
     }
-    
+
     .hero-subtitle {
         font-size: 1.1rem;
     }
-    
+
     .section {
         padding: 60px 0;
     }
-    
+
     .section-title {
         font-size: 2rem;
     }
-    
+
     .car-images {
         position: relative;
         margin-top: 40px;
@@ -1510,37 +1568,42 @@ tbody tr:hover {
         align-items: center;
         gap: 20px;
     }
-    
-    .audi-car, .bmw-car {
+
+    .audi-car,
+    .bmw-car {
         width: 90%;
         height: 200px;
         transform: none;
     }
-    
-    .cards-container, .tech-container {
+
+    .cards-container,
+    .tech-container {
         flex-direction: column;
         align-items: center;
     }
-    
-    .card, .tech-block {
+
+    .card,
+    .tech-block {
         max-width: 100%;
     }
-    
+
     .footer-content {
         flex-direction: column;
         text-align: center;
         gap: 25px;
     }
-    
+
     .footer-info {
         min-width: 100%;
     }
-    
-    .audi, .bmw {
+
+    .audi,
+    .bmw {
         padding: 20px;
     }
-    
-    .audi h2, .bmw h2 {
+
+    .audi h2,
+    .bmw h2 {
         font-size: 1.7rem;
     }
 }
@@ -1549,37 +1612,38 @@ tbody tr:hover {
     .hero-title {
         font-size: 1.9rem;
     }
-    
+
     .hero-subtitle {
         font-size: 1rem;
     }
-    
+
     .cta-button {
         padding: 15px 30px;
         font-size: 1rem;
     }
-    
+
     .section-title {
         font-size: 1.8rem;
     }
-    
+
     .ev-cars {
         flex-direction: column;
         gap: 20px;
     }
-    
+
     .torque-distribution {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
     }
-    
+
     .car-center {
         grid-column: 1 / span 2;
         grid-row: 2;
         margin: 20px 0;
     }
-    
-    .audi h2, .bmw h2 {
+
+    .audi h2,
+    .bmw h2 {
         font-size: 1.5rem;
     }
 }

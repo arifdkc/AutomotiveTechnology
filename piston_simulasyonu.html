@@ -48,40 +48,41 @@
         </div>
     </div>
 
+    
+        <div class="controls">
+            <button class="btn-start" onclick="startEngine()">Başlat</button>
+            <button class="btn-stop" onclick="stopEngine()">Durdur</button>
+            <button class="btn-step" onclick="stepEngine()">Adım Adım (+15°)</button>
+            <label style="font-size: 0.8em; color: #aaa;">Hız:</label>
+            <input type="range" id="speedRange" min="1" max="20" value="5">
+        </div>
+<div class="main-content">
 
-    <div class="controls">
-        <button class="btn-start" onclick="startEngine()">Başlat</button>
-        <button class="btn-stop" onclick="stopEngine()">Durdur</button>
-        <button class="btn-step" onclick="stepEngine()">Adım Adım (+15°)</button>
-        <label style="font-size: 0.8em; color: #aaa;">Hız:</label>
-        <input type="range" id="speedRange" min="1" max="20" value="5">
-    </div>
+        <div class="engine-container">
+            <div class="chamber-bg" id="chamberBg"></div>
 
-    <div class="engine-container">
-        <div class="chamber-bg" id="chamberBg"></div>
-
-        <div class="valves">
-            <div class="valve intake" id="valveIntake"></div>
-            <div class="spark-plug">
-                <div class="spark" id="sparkFlash"></div>
+            <div class="valves">
+                <div class="valve intake" id="valveIntake"></div>
+                <div class="spark-plug">
+                    <div class="spark" id="sparkFlash"></div>
+                </div>
+                <div class="valve exhaust" id="valveExhaust"></div>
             </div>
-            <div class="valve exhaust" id="valveExhaust"></div>
+
+            <div class="piston-group" id="pistonGroup">
+                <div class="piston"></div>
+                <div class="connecting-rod" id="conRod"></div>
+            </div>
+
+            <div class="crankshaft"></div>
         </div>
 
-        <div class="piston-group" id="pistonGroup">
-            <div class="piston"></div>
-            <div class="connecting-rod" id="conRod"></div>
+        <div class="info-panel">
+            <div class="stroke-name" id="strokeName">Hazır</div>
+            <div class="stroke-desc" id="strokeDesc">Simülasyonu başlatmak için butona basın.</div>
+            <div class="data-display">Krank Açısı: <span id="angleDisplay">0</span>°</div>
         </div>
-
-        <div class="crankshaft"></div>
     </div>
-
-    <div class="info-panel">
-        <div class="stroke-name" id="strokeName">Hazır</div>
-        <div class="stroke-desc" id="strokeDesc">Simülasyonu başlatmak için butona basın.</div>
-        <div class="data-display">Krank Açısı: <span id="angleDisplay">0</span>°</div>
-    </div>
-
     <script src="piston_simulasyonu.js"></script>
 
 </body>

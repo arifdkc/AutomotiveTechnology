@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wankel Rotary Motoru: Mühendislik ve Analiz</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&family=Roboto+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="wankel.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fas fa-car-battery"></i> Otomotiv Teknolojileri
+            </div>
+
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-links" id="main-nav">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="piston_simulasyonu.html">Simülasyonlar</a></li>
+                <li><a href="quattro_vs_xdrive.html">Otomotiv Teknolojileri</a></li>
+                <li><a href="otto.html" class="active">Blog & Analiz</a></li>
+                <li><a href="vocabulary.html">Teknoloji Sözlüğü</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="sidebar" id="sidebar">
+        <div class="close-btn" id="close-btn">&times;</div>
+
+        <div class="sidebar-content">
+            <ul class="sidebar-links">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="piston_simulasyonu.html">Simülasyonlar</a></li>
+                <li><a href="quattro_vs_xdrive.html">Otomotiv Teknolojileri</a></li>
+                <li><a href="otto.html" class="active">Blog & Analiz</a></li>
+                <li><a href="vocabulary.html">Teknoloji Sözlüğü</a></li>
+            </ul>
+        </div>
+    </div>
+    <header class="hero">
+        <div class="container hero-content">
+            <span class="badge">Advanced Automotive Mechanics</span>
+            <h1>WANKEL <br>ROTARY ENGINE</h1>
+            <p>
+                Dairesel hareketin saf güce dönüşümü. Geleneksel pistonların ataletini reddeden,
+                Felix Wankel'in mühendislik dehası ve Mazda'nın RX efsanesi.
+            </p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="dev-note">
+            <span class="dev-title">Wankel Motoru Nedir?</span>
+            <p> Wankel motor, geleneksel pistonlu motorlardan farklı olarak dönen üçgen biçimli bir rotorla çalışan
+                içten
+                yanmalı bir motor tipidir. Alman mühendis Felix Wankel tarafından geliştirilmiştir.</p>
+            <p> Bu motor tipi, daha az hareketli parçaya sahip olduğundan daha pürüssüz bir çalışma sağlar ve titreşimi
+                azaltır.</p>
+            <p>Wankel motorun tasarımı, enerji dönüşümünde daha yüksek verimlilik ve performans sunarak geleneksel
+                motorlardan farklılık gösterir.</p>
+        </div>
+        <div class="image">
+            <img src="wankel-motor.png" alt="Wankel Motoru">
+        </div>
+        <div class="tech-grid">
+            <div class="card">
+                <h3>01. Epitrokoid Gövde</h3>
+                <p>
+                    Wankel motorunun kalbi oval değil, matematiksel olarak "Epitrokoid" adı verilen özel bir eğridir.
+                    Bu geometri, rotorun üç köşesinin de her an gövdeye temas etmesini sağlayarak
+                    <strong>değişken hacimli odacıklar</strong> yaratır.
+                </p>
+            </div>
+            <div class="card">
+                <h3>02. Eksantrik Mil</h3>
+                <p>
+                    Pistonlu motordaki krank milinin karşılığıdır. Rotorun yörüngesel dönüşünü,
+                    şanzımana iletilecek dairesel tork hareketine çevirir. Rotor hızı ile mil hızı arasında
+                    <strong>1:3 oranı</strong> vardır.
+                </p>
+            </div>
+            <div class="card">
+                <h3>03. Apex Keçeleri</h3>
+                <p>
+                    Mühendisliğin en büyük zorluğu. Rotorun üç ucunda bulunan bu parçalar, yanma odasını izole eder.
+                    Segmanların aksine merkezkaç kuvvetiyle çalışır ve motorun en kritik (ve en zayıf) noktasıdır.
+                </p>
+            </div>
+
+        </div>
+
+        <section class="blueprint-section">
+            <div class="blueprint-bg"></div>
+            <div class="container" style="position: relative; z-index: 2;">
+                <h2 class="section-title">4 Zamanlı <span>Dairesel</span> Çevrim</h2>
+
+                <div class="cycle-visual">
+                    <div class="cycle-step">
+                        <span class="cycle-icon">INTAKE</span>
+                        <h4>1. Emme</h4>
+                        <p>Rotor dönerken hacim genişler, portlar açılır ve vakumla karışım içeri çekilir.</p>
+                    </div>
+                    <div class="cycle-step">
+                        <span class="cycle-icon">COMPRESS</span>
+                        <h4>2. Sıkıştırma</h4>
+                        <p>Karışım, gövdenin daralan kısmına taşınır. Hacim küçülür, basınç artar.</p>
+                    </div>
+                    <div class="cycle-step" style="border-color: var(--primary-accent);">
+                        <span class="cycle-icon" style="color: var(--primary-accent);">IGNITION</span>
+                        <h4>3. Ateşleme</h4>
+                        <p>Çift buji ile ateşleme gerçekleşir. Genişleyen gaz rotoru iterek tork üretir.</p>
+                    </div>
+                    <div class="cycle-step">
+                        <span class="cycle-icon">EXHAUST</span>
+                        <h4>4. Egzoz</h4>
+                        <p>Rotor dönüşüne devam ederken egzoz portu açılır ve yanmış gazlar tahliye edilir.</p>
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="wankel_aşama.png" alt=""
+                        style="margin-top: 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.5);" width="">
+                </div>
+            </div>
+        </section>
+
+        <div class="comparison-wrapper">
+            <h2 style="margin-bottom: 20px;">Teknik Verimlilik Karşılaştırması</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 30%;">Parametre</th>
+                        <th>Wankel (Rotary) 13B</th>
+                        <th>Pistonlu (Otto) 2.0L</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="highlight-row">
+                        <td>Güç Yoğunluğu (HP/Litre)</td>
+                        <td>Çok Yüksek (~170 HP/L)</td>
+                        <td>Ortalama (~80-100 HP/L)</td>
+                    </tr>
+                    <tr>
+                        <td>Hareketli Parça Sayısı</td>
+                        <td>3 Ana Parça (2 Rotor + 1 Mil)</td>
+                        <td>40+ Parça (Piston, Valf, Yay...)</td>
+                    </tr>
+                    <tr>
+                        <td>Termal Verimlilik</td>
+                        <td>Düşük (Isı kaybı yüzey alanı geniş)</td>
+                        <td>Yüksek</td>
+                    </tr>
+                    <tr>
+                        <td>Tork Karakteristiği</td>
+                        <td>Lineer, Yüksek Devirde Canlı</td>
+                        <td>Düşük Devirde Daha Yüksek Tork</td>
+                    </tr>
+                    <tr>
+                        <td>Yağlama Sistemi</td>
+                        <td>Yanma odasına yağ püskürtülür (Kayıp yağ)</td>
+                        <td>Kapalı devre karter sistemi</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+
+        <br><br><br>
+
+    </main>
+
+    <section>
+        <h2>Technical Vocabulary (Sözlük)</h2>
+        <div class="vocab-container">
+            <div class="vocab-card">camshaft<br><small>Eksantrik Mil</small></div>
+            <div class="vocab-card">Spark Plug<br><small>Buji</small></div>
+            <div class="vocab-card">Stroke<br><small>Zaman / Vuruş</small></div>
+            <div class="vocab-card">Efficiency<br><small>Verimlilik</small></div>
+        </div>
+    </section>
+
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p class="developer">Geliştiren: <strong><a href="https://arifemredikici.com/">Arif Emre
+                                Dikici</a></strong> - Automotive Technology Student &
+                        Full-stack Developer</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/arifdkc" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/arif-emre-dikici-315545294/" class="social-link"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://arifemredikici.com/" class="social-link"><i class="fas fa-globe"></i></a>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>©2025 Automotive Technologies Blog created by <a href="https://arifemredikici.com/">Arif Emre
+                        Dikici</a> - Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+    <script>  document.addEventListener('DOMContentLoaded', function () {
+            // Gerekli elementleri seç
+            const menuToggle = document.getElementById('mobile-menu'); // Hamburger ikon
+            const sidebar = document.getElementById('sidebar'); // Sidebar div'i
+            const closeBtn = document.getElementById('close-btn'); // Yeni Kapatma İkonu
+
+            // Sidebar'ı kapatma fonksiyonu
+            function closeSidebar() {
+                sidebar.classList.remove('open');
+                menuToggle.classList.remove('active');
+            }
+
+            // 1. Hamburger ikonuna tıklama olayı (Açar/Kapatır)
+            menuToggle.addEventListener('click', function () {
+                sidebar.classList.toggle('open');
+                menuToggle.classList.toggle('active');
+            });
+
+            // 2. Yeni Kapatma butonuna tıklama olayı (Sadece Kapatır)
+            closeBtn.addEventListener('click', closeSidebar);
+
+
+            // 3. Sidebar'daki bir bağlantıya tıklandığında menüyü kapatmak için
+            const sidebarLinks = document.querySelectorAll('.sidebar-links a');
+
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', closeSidebar);
+            });
+        });</script>
+</body>
+
+</html>
