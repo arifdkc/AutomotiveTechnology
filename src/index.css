@@ -1,0 +1,39 @@
+/* --- Genel Ayarlar ve Değişkenler --- */
+:root {
+    --primary-color: #2563eb;
+    /* Otomotiv Mavisi */
+    --primary-hover: #1d4ed8;
+    --bg-dark: #111827;
+    /* Ana Koyu Arkaplan */
+    --bg-card: #1f2937;
+    /* Kart Arkaplanı */
+    --text-main: #f3f4f6;
+    /* Beyaz Yazı */
+    --text-muted: #9ca3af;
+    /* Gri Yazı */
+    --border-color: #374151;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+}

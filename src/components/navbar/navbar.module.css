@@ -1,0 +1,176 @@
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+.navLinks {
+    list-style: none;
+    display: flex;
+}
+
+.navbar {
+
+    background-color: #1f2937;
+    border-bottom: 1px solid var(--border-color);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem 0;
+    width: 100% !important;
+    padding: 0;
+    margin-bottom: 100px;
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Masaüstü Navigasyon Linkleri (Varsayılan olarak görünür) */
+.navLinks {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    /* Masaüstünde yan yana durmaları için */
+}
+
+.navLinks li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.navLinks li a:hover,
+.navLinks li a.active {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Hamburger Menü İkonu (Varsayılan olarak gizli) */
+.menuToggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Sidebar Stilleri */
+.sidebar {
+    position: fixed;
+    /* Sabit kalması için */
+    top: 0;
+    right: -250px;
+    /* Başlangıçta ekran dışı (gizli) */
+    width: 250px;
+    height: 100%;
+
+    background-color: #1f2937;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+    /* Açılıp kapanma animasyonu */
+    z-index: 1000;
+    /* Diğer elementlerin üstünde olması için */
+}
+
+/* JavaScript ile eklenecek sınıf: Sidebar açıkken */
+.sidebar.open {
+    right: 0;
+    /* Ekran içine kaydır */
+}
+
+.sidebarLinks {
+    list-style: none;
+    padding: 20px 0;
+    margin: 0;
+}
+
+.sidebarLinks li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    /* Tam genişlik kaplaması için */
+    border-bottom: 1px solid #444;
+}
+
+.sidebarLinks li a:hover,
+.sidebarLinks li a.active {
+    background-color: #444;
+}
+
+.closeBtn {
+    position: absolute;
+    /* Sidebar'ın sağ üst köşesine sabitle */
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    line-height: 1;
+    /* X işaretinin dikey hizalaması için */
+    padding: 5px;
+    transition: color 0.2s;
+}
+
+.closeBtn:hover {
+    color: #f00;
+    /* Kırmızı renk vererek dikkat çek */
+}
+
+/* 768px'in Altı (Mobil Görünüm) */
+@media screen and (max-width: 768px) {
+
+    /* Hamburger ikonunu göster */
+    .menuToggle {
+        display: flex;
+    }
+
+    /* Masaüstü linklerini gizle */
+    .navLinks {
+        display: none;
+    }
+
+    .sidebarLinks {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Hamburger menü açıldığında ikonun X'e dönüşmesi (İsteğe bağlı görsel efekt) */
+.menuToggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menuToggle.active .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.menuToggle.active .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}

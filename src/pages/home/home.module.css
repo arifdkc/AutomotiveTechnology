@@ -1,0 +1,172 @@
+
+/* --- Hero Section --- */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(17, 24, 39, 0.85), rgba(17, 24, 39, 0.95)),
+        url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 60px;
+    /* Navbar payı */
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    color: var(--primary-color);
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+/* Butonlar */
+.btn {
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btnPrimary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btnPrimary:hover {
+    background-color: var(--primary-hover);
+}
+
+.btnSecondary {
+    border: 1px solid var(--text-muted);
+    color: white;
+    margin-left: 10px;
+}
+
+.btnSecondary:hover {
+    background-color: var(--bg-card);
+}
+
+/* --- Sections & Grid --- */
+.section {
+    padding: 80px 0;
+}
+
+.sectionTitle {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.sectionTitle h2 {
+    font-size: 2.5rem;
+}
+
+.grid3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: var(--bg-card);
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s, border-color 0.3s;
+    max-width: 400px;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+}
+
+.card .icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* --- Split Layout (Görsel + Yazı) --- */
+.bgDarker {
+    background-color: #0d1117;
+}
+
+/* Alternatif koyu ton */
+
+.splitLayout {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.splitImage {
+    width: 50%;
+}
+
+.splitImage img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--border-color);
+}
+
+.splitContent {
+    flex: 1;
+}
+
+.featureList li {
+    margin: 15px 0;
+    color: var(--text-muted);
+}
+.featureList li ul{
+    flex-direction: column;
+}
+.featureList i {
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+.splitImage img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius); /* index.css'den gelen değişkeni kullanır */
+  object-fit: cover;
+  max-height: 400px;
+}
+
+.splitLayout {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap; /* Mobilde alt alta gelmesini sağlar */
+}
+
+
+/* --- Responsive (Mobil) --- */
+@media (max-width: 768px) {
+
+    /* Basitlik için mobilde menüyü gizledik */
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .splitLayout {
+        flex-direction: column;
+    }
+
+}

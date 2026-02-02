@@ -1,0 +1,283 @@
+/* --- Değişkenler --- */
+.simulationPage {
+    --bg-color: #111827;
+    --cyl-width: 220px;
+    --piston-height: 100px;
+    --metal-light: #d1d5db;
+    --metal-dark: #4b5563;
+    --accent-color: #f59e0b;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    width: 100%;
+}
+
+.mainContent {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+/* --- Kontrol Paneli --- */
+.controls {
+    background: #1f2937;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    border: 1px solid #374151;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.2s;
+    font-size: 0.9rem;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.btnStart {
+    background-color: #059669;
+    color: white;
+}
+
+.btnStart:hover {
+    background-color: #047857;
+}
+
+.btnStop {
+    background-color: #dc2626;
+    color: white;
+}
+
+.btnStop:hover {
+    background-color: #b91c1c;
+}
+
+.btnStep {
+    background-color: #d97706;
+    color: white;
+}
+
+.btnStep:hover {
+    background-color: #b45309;
+}
+
+input[type="range"] {
+    margin: 0 10px;
+    accent-color: var(--accent-color);
+}
+
+/* --- Motor Bloğu --- */
+.engineContainer {
+    position: relative;
+    width: var(--cyl-width);
+    height: 400px;
+    background: #374151;
+    border: 4px solid #4b5563;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.chamberBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-color: transparent;
+    transition: background-color 0.1s;
+    z-index: 1;
+}
+
+.valves {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    z-index: 4;
+}
+
+.valve {
+    width: 25px;
+    height: 40px;
+    background: var(--metal-light);
+    transition: transform 0.1s;
+    transform-origin: top center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.intake {
+    background: linear-gradient(to right, #93c5fd, #60a5fa, #93c5fd);
+    border: 1px solid #3b82f6;
+}
+
+.exhaust {
+    background: linear-gradient(to right, #fca5a5, #f87171, #fca5a5);
+    border: 1px solid #ef4444;
+}
+
+.sparkPlug {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 35px;
+    background: #e5e7eb;
+    z-index: 5;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.spark {
+    position: absolute;
+    bottom: -15px;
+    left: -14px;
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(circle, #fef08a, #f59e0b, transparent 70%);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.05s;
+    z-index: 6;
+    mix-blend-mode: screen;
+}
+
+/* Piston Grubu */
+.pistonGroup {
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    /* Dinamik olarak JS ile kontrol ediliyor */
+    z-index: 3;
+}
+
+.piston {
+    width: 90%;
+    height: var(--piston-height);
+    background: linear-gradient(to right, var(--metal-dark), var(--metal-light), var(--metal-dark));
+    margin: 0 auto;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    border: 1px solid #6b7280;
+}
+
+.connectingRod {
+    width: 18px;
+    height: 140px;
+    background: linear-gradient(90deg, #4b5563, #6b7280, #4b5563);
+    margin: -5px auto 0;
+    position: relative;
+    transform-origin: top center;
+    z-index: 2;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.crankshaft {
+    position: absolute;
+    top: 278px;
+    left: 64px;
+    width: 80px;
+    height: 80px;
+    border: 8px solid var(--metal-dark);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    opacity: 0.8;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* --- Bilgi Paneli --- */
+.infoPanel {
+    text-align: left;
+    background: #1f2937;
+    padding: 25px;
+    border-radius: 12px;
+    width: 350px;
+    border-left: 6px solid var(--accent-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    align-self: flex-start;
+    margin-top: 20px;
+}
+
+.strokeName {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    border-bottom: 1px solid #374151;
+    padding-bottom: 10px;
+}
+
+.strokeDesc {
+    font-size: 1rem;
+    color: #d1d5db;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.dataDisplay {
+    font-family: 'Courier New', Courier, monospace;
+    background: #111827;
+    padding: 10px;
+    border-radius: 6px;
+    color: #10b981;
+    font-size: 0.9em;
+    display: inline-block;
+}
+
+@media (max-width: 992px) {
+    .mainContent {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .infoPanel {
+        width: 90%;
+        max-width: 500px;
+        align-self: center;
+        margin-top: 30px;
+    }
+
+    .controls {
+        flex-direction: column;
+        width: 90%;
+    }
+}
