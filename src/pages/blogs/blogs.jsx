@@ -18,7 +18,7 @@ const Blogs = () => {
             title: "Otto motor nedir?",
             excerpt: "Otto motor, içten yanmalı motorların en yaygın türlerinden biridir. Silindir içinde yakıt-hava karışımının sıkıştırılması ve ateşlenmesi prensibine dayanır.",
             category: "nedir",
-            date: "10 temmuz 2025",
+            date: "10 Temmuz 2025",
             image: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
             link: "/blogs/otto"
         },
@@ -27,15 +27,25 @@ const Blogs = () => {
             title: "wankel motor nedir?",
             excerpt: "Wankel motor, içten yanmalı motorların farklı bir türüdür. Silindir yerine rotor kullanır.",
             category: "nedir",
-            date: "15 temmuz 2025",
+            date: "15 Temmuz 2025",
             image: "/wankel-motor.png",
             link: "/blogs/wankel"
+        },
+        {
+            id: 4,
+            title: "Yakıt Tasarrufu Rehberi",
+            excerpt: "Depoyu Daha Geç Boşaltmanın Sandığınızdan Daha Kolay Yolları",
+            category: "rehber",
+            date: "13 Şubat 2025",
+            image: "/tasaruf_img.png",
+            link: "/blogs/yakit_tasarrufu"
         }
     ];
 
     const categoryLabels = {
         'nedir': 'Nedir',
         'karşılaştırma': 'Karşılaştırma',
+        'rehber': 'Rehber',
     };
 
     const [activeFilter, setActiveFilter] = useState('all');
@@ -86,6 +96,12 @@ const Blogs = () => {
                             onClick={() => setActiveFilter('haber')}
                         >
                             Haberler
+                        </button>
+                        <button
+                            className={`${styles.filterBtn} ${activeFilter === 'rehber' ? styles.active : ''}`}
+                            onClick={() => setActiveFilter('rehber')}
+                        >
+                            Rehber
                         </button>
                     </div>
 

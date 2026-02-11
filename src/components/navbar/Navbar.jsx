@@ -12,7 +12,7 @@ const Navbar = () => {
     <>
       <nav className={styles.navbar}> {/* Sınıf kullanımı değişti */}
         <div className={styles.container}>
-          <div className={styles.logo}><img src="/logo_png.png" alt="logo" width={350} height={80} /></div>
+          <div className={styles.logo}><img src="/logo_png.png" alt="logo" width={330} height={60} /></div>
 
           <div className={`${styles.menuToggle} ${isOpen ? styles.active : ''}`} onClick={toggleMenu}>
             <span className={styles.bar}></span>

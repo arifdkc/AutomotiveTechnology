@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './Footer.module.css'; // 1. CSS Modülünü içeri alıyoruz
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faGlobe } from '@fortawesome/free-solid-svg-icons'
 const Footer = () => {
   return (
     <footer className={styles.footer}> {/* 2. className="footer" yerine styles.footer */}
@@ -17,13 +19,13 @@ const Footer = () => {
           </div>
           <div className={styles.footerSocial}>
             <a href="https://github.com/arifdkc" className={styles.socialLink} target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-github"></i>
+              <FontAwesomeIcon icon={faGithub} />
             </a>
             <a href="https://www.linkedin.com/in/arif-emre-dikici-315545294/" className={styles.socialLink} target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-linkedin"></i>
+              <FontAwesomeIcon icon={faLinkedin} />
             </a>
             <a href="https://arifemredikici.com/" className={styles.socialLink} target="_blank" rel="noopener noreferrer">
-              <i className="fas fa-globe"></i>
+              <FontAwesomeIcon icon={faGlobe} />
             </a>
           </div>
         </div>

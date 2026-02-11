@@ -8,6 +8,8 @@ import Home from './pages/home/home';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
 import Blogs from './pages/blogs/blogs';
+import NotFound from './pages/404/404';
+import Yakit from './pages/yakıt_tasarufu/yakıt_tasarufu'
 function App() {
   return (
     <Router>
@@ -22,7 +24,10 @@ function App() {
             <Route path="/piston-simulasyonu" element={<Piston_sim />} />
             <Route path="/blogs/quattro-vs-xdrive" element={<Awd />} />
             <Route path="/vocabulary" element={<Vocabulary />} />
+            <Route path="/blogs/yakit_tasarrufu" element={<Yakit />} />
             <Route path="/blogs" element={<Blogs />} />
+
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
 
