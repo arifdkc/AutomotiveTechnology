@@ -113,8 +113,8 @@ const Simulation = () => {
           <div className={styles.strokeName} id="strokeName">Hazır</div>
           <div className={styles.strokeDesc} id="strokeDesc">Simülasyonu başlatmak için butona basın.</div>
           <div className={styles.dataDisplay}>Krank Açısı: <span id="angleDisplay">{angle} </span>°</div>
-          <div className={styles.dataDisplay}>Strok: <span id="strokeDisplay">{currentStroke.name} </span></div>
-          <div className={styles.dataDisplay}>Açıklama: <span id="strokeDisplay">{currentStroke.desc} </span></div>
+          <div className={styles.dataDisplay}> <span id="strokeDisplay">{currentStroke.name} </span></div>
+          <div className={styles.dataDisplay}> <span id="strokeDisplay">{currentStroke.desc} </span></div>
         </div>
       </div>
     </div>
