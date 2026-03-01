@@ -1,0 +1,634 @@
+.container {
+    min-height: 100vh;
+    padding: 30px;
+    background-color: #0b0e14;
+    color: #e2e8f0;
+    font-family: "Inter", sans-serif;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.headerLeft {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logoIcon {
+    color: #00f2fe;
+    width: 40px;
+    height: 40px;
+    animation: pulseGlow 5s infinite;
+}
+
+@keyframes pulseGlow {
+    0% {
+        filter: drop-shadow(0 0 5px rgba(0, 242, 254, 0.5));
+    }
+
+    50% {
+        filter: drop-shadow(0 0 15px rgba(0, 242, 254, 0.8));
+    }
+
+    100% {
+        filter: drop-shadow(0 0 5px rgba(0, 242, 254, 0.5));
+    }
+}
+
+.header h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.header p {
+    margin: 0;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.systemStatus {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.statusBadge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.textGreen {
+    color: #2ed573;
+}
+
+.textRed {
+    color: #ff4757;
+}
+
+.powerBtn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    background: #ff4757;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.powerBtn.powerActive {
+    background: #2ed573;
+    box-shadow: 0 0 15px rgba(46, 213, 115, 0.3);
+}
+
+/* Dashboard Grid Structure */
+.dashboardGrid {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: auto auto;
+    gap: 25px;
+}
+
+.panelTitle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+    color: #cbd5e1;
+    margin: 0 0 20px 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Panels Common */
+.controlsPanel,
+.busPanel,
+.terminalPanel {
+    background: #151a23;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* 1. Controls Panel (Sol) */
+.controlsPanel {
+    grid-row: 1 / 3;
+    grid-column: 1 / 2;
+}
+
+.controlGroup {
+    margin-bottom: 30px;
+}
+
+.controlHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.controlHeader label {
+    font-weight: 500;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.valueDisplay {
+    background: #0b0e14;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-family: 'Fira Code', monospace;
+    color: #00f2fe;
+    font-size: 0.9rem;
+    border: 1px solid rgba(0, 242, 254, 0.2);
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    border-radius: 3px;
+    background: #2a3143;
+    outline: none;
+    margin-bottom: 15px;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid white;
+}
+
+.sliderRed::-webkit-slider-thumb {
+    background: #ff4757;
+}
+
+.sliderBlue::-webkit-slider-thumb {
+    background: #00f2fe;
+}
+
+.sliderGreen::-webkit-slider-thumb {
+    background: #2ed573;
+}
+
+.sliderOrange::-webkit-slider-thumb {
+    background: #ffa502;
+}
+
+.gaugeBar {
+    height: 4px;
+    background: #2a3143;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.gaugeFill {
+    height: 100%;
+    transition: width 0.3s ease, background 0.3s ease;
+}
+
+.steeringWheel {
+    height: 4px;
+    background: #2a3143;
+    position: relative;
+    border-radius: 2px;
+    margin-top: 10px;
+}
+
+.wheelIndicator {
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    width: 4px;
+    height: 16px;
+    background: #00f2fe;
+    transform-origin: bottom center;
+    transition: transform 0.1s ease;
+}
+
+.actionGrid {
+    display: grid;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.actionBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.actionBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btnDanger {
+    background: rgba(255, 71, 87, 0.1);
+    color: #ff4757;
+    border: 1px solid rgba(255, 71, 87, 0.3);
+}
+
+.activeBrake {
+    background: #ff4757 !important;
+    color: white !important;
+    box-shadow: 0 0 20px rgba(255, 71, 87, 0.5);
+    transform: scale(0.98);
+}
+
+.btnCyan {
+    background: rgba(0, 242, 254, 0.1);
+    color: #00f2fe;
+    border: 1px solid rgba(0, 242, 254, 0.3);
+}
+
+.inactiveBtn {
+    background: rgba(255, 255, 255, 0.05);
+    color: #94a3b8;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.warningBanner {
+    background: rgba(255, 71, 87, 0.1);
+    border: 1px solid rgba(255, 71, 87, 0.5);
+    color: #ff4757;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    font-weight: 600;
+    animation: pulseWarning 2s infinite;
+}
+
+@keyframes pulseWarning {
+    0% {
+        box-shadow: 0 0 0 rgba(255, 71, 87, 0.0);
+    }
+
+    50% {
+        box-shadow: 0 0 15px rgba(255, 71, 87, 0.6);
+    }
+
+    100% {
+        box-shadow: 0 0 0 rgba(255, 71, 87, 0.0);
+    }
+}
+
+/* 2. Bus Panel (Sağ Üst) */
+.busPanel {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.busHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.busStats {
+    display: flex;
+    gap: 20px;
+}
+
+.statBox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background: #0b0e14;
+    padding: 8px 15px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.statBox span {
+    font-size: 0.8rem;
+    color: #94a3b8;
+}
+
+.statBox strong {
+    font-size: 1.1rem;
+    font-family: 'Fira Code', monospace;
+}
+
+.busLineContainer {
+    position: relative;
+    padding: 20px 0;
+}
+
+.ecuNodes {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.ecuNode {
+    background: #1e2532;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid #374151;
+    font-size: 0.9rem;
+    font-weight: 500;
+    position: relative;
+}
+
+.ecuNode::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    width: 2px;
+    height: 20px;
+    background: #4facfe;
+}
+
+.wireGroup {
+    position: relative;
+    height: 140px;
+    background: #0b0e14;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+}
+
+.wireDim {
+    opacity: 0.3;
+}
+
+.wire {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, rgba(79, 172, 254, 0.5), transparent);
+}
+
+.wire:nth-child(1) {
+    top: 40px;
+    border-bottom: 2px dashed #ffbd2e;
+}
+
+/* CAN-H */
+.wire:nth-child(2) {
+    top: 110px;
+    border-bottom: 2px dashed #27c93f;
+}
+
+/* CAN-L */
+
+.wireLabel {
+    position: absolute;
+    left: 10px;
+    top: -20px;
+    font-size: 0.8rem;
+    color: #94a3b8;
+    font-family: 'Fira Code', monospace;
+}
+
+.canPacket {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #111;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: slideRight 8s linear forwards;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+@keyframes slideRight {
+    0% {
+        left: -100px;
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        left: 100%;
+        opacity: 0;
+    }
+}
+
+.priority1 {
+    background: #ff4757;
+    color: white;
+    box-shadow: 0 0 15px #ff4757;
+}
+
+.priority2 {
+    background: #ffa502;
+}
+
+.priority3 {
+    background: #2ed573;
+}
+
+.priority5 {
+    background: #7bed9f;
+}
+
+/* 3. Terminal Panel (Sağ Alt) */
+.terminalPanel {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.terminalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.clearBtn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #cbd5e1;
+    padding: 6px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.clearBtn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.terminalWindow {
+    background: #000000;
+    border-radius: 8px;
+    border: 1px solid #333;
+    height: 300px;
+    overflow-y: auto;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.85rem;
+    padding: 10px;
+}
+
+.terminalWindow::-webkit-scrollbar {
+    width: 8px;
+}
+
+.terminalWindow::-webkit-scrollbar-track {
+    background: #111;
+}
+
+.terminalWindow::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 4px;
+}
+
+.terminalLabels {
+    display: grid;
+    grid-template-columns: 100px 120px 2fr 1.5fr;
+    color: #666;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.logRow {
+    display: grid;
+    grid-template-columns: 100px 120px 2fr 1.5fr;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+    align-items: center;
+}
+
+.logRow:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.logTime {
+    color: #888;
+}
+
+.logId {
+    color: #00f2fe;
+}
+
+.logData {
+    color: #e2e8f0;
+    letter-spacing: 1px;
+}
+
+.logRaw {
+    color: #2ed573;
+    font-weight: bold;
+}
+
+/* Log Renklendirmeleri */
+.logP1 {
+    border-left: 3px solid #ff4757;
+    padding-left: 8px;
+    background: rgba(255, 71, 87, 0.05);
+}
+
+.logP2 {
+    border-left: 3px solid #ffa502;
+    padding-left: 8px;
+}
+
+.emptyTerminal {
+    color: #555;
+    text-align: center;
+    margin-top: 50px;
+    font-style: italic;
+}
+
+/* Gelişmiş Responsive Tasarım */
+@media (max-width: 1024px) {
+    .dashboardGrid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+    }
+
+    .controlsPanel {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+    }
+
+    .busPanel {
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+    }
+
+    .terminalPanel {
+        grid-row: 3 / 4;
+        grid-column: 1 / 2;
+    }
+
+    .actionGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .actionGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .terminalLabels,
+    .logRow {
+        grid-template-columns: 100px 100px 1.5fr;
+        /* 3 kolon - Raw data altta veya gizli */
+    }
+
+    .logRaw {
+        display: none;
+        /* Mobilde dar alan için gizle */
+    }
+}

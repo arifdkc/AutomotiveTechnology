@@ -22,7 +22,7 @@ const Navbar = () => {
 
           <ul className={styles.navLinks}>
             <li><NavLink to="/" className={({ isActive }) => isActive ? styles.activeLink : ''}>Ana Sayfa</NavLink></li>
-            <li><NavLink to="/piston-simulasyonu">Simülasyonlar</NavLink></li>
+            <li><NavLink to="/simulasyonlar">Simülasyonlar</NavLink></li>
             <li><NavLink to="/blogs" onClick={closeMenu}>Blog & Analiz</NavLink></li>
             <li><NavLink to="/vocabulary" onClick={closeMenu}>Teknoloji Sözlüğü</NavLink></li>
           </ul>
@@ -34,9 +34,8 @@ const Navbar = () => {
         <div className={styles.closeBtn} onClick={closeMenu}>&times;</div>
         <ul className={styles.sidebarLinks}>
           <li><NavLink to="/" onClick={closeMenu}>Ana Sayfa</NavLink></li>
-          <li><NavLink to="/piston-simulasyonu" onClick={closeMenu}>Simülasyonlar</NavLink></li>
-          <li><NavLink to="/quattro-vs-xdrive" onClick={closeMenu}>Otomotiv Teknolojileri</NavLink></li>
-          <li><NavLink to="/otto" onClick={closeMenu}>Blog & Analiz</NavLink></li>
+          <li><NavLink to="/simulasyonlar" onClick={closeMenu}>Simülasyonlar</NavLink></li>
+          <li><NavLink to="/blogs" onClick={closeMenu}>Blog & Analiz</NavLink></li>
           <li><NavLink to="/vocabulary" onClick={closeMenu}>Teknoloji Sözlüğü</NavLink></li>
         </ul>
       </div>

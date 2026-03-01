@@ -1,4 +1,3 @@
-
 /* --- Hero Section --- */
 .hero {
     height: 100vh;
@@ -85,11 +84,7 @@
     transition: transform 0.3s, border-color 0.3s;
     max-width: 400px;
 }
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+
 .card:hover {
     transform: translateY(-5px);
     border-color: var(--primary-color);
@@ -134,26 +129,31 @@
     margin: 15px 0;
     color: var(--text-muted);
 }
-.featureList li ul{
+
+.featureList li ul {
     flex-direction: column;
 }
+
 .featureList i {
     color: var(--primary-color);
     margin-right: 10px;
 }
+
 .splitImage img {
-  width: 100%;
-  height: auto;
-  border-radius: var(--border-radius); /* index.css'den gelen değişkeni kullanır */
-  object-fit: cover;
-  max-height: 400px;
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    /* index.css'den gelen değişkeni kullanır */
+    object-fit: cover;
+    max-height: 400px;
 }
 
 .splitLayout {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  flex-wrap: wrap; /* Mobilde alt alta gelmesini sağlar */
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    /* Mobilde alt alta gelmesini sağlar */
 }
 
 

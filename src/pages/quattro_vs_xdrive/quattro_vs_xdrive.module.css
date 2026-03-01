@@ -16,6 +16,19 @@
     animation-delay: 0.8s;
 }
 
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @keyframes slideLeft {
     from {
         transform: translateX(-100%) scale(0.8);
@@ -25,6 +38,8 @@
     to {
         transform: translateX(0) scale(1);
         opacity: 1;
+        transform: perspective(1000px) rotateY(15deg);
+
     }
 }
 
@@ -37,6 +52,8 @@
     to {
         transform: translateX(0) scale(1);
         opacity: 1;
+        transform: perspective(-1000px) rotateY(-15deg);
+
     }
 }
 
@@ -84,8 +101,8 @@
 
 /* Hero Bölümü */
 .heroSection {
-    height: 100vh;
-    min-height: 700px;
+    min-height: 100vh;
+    padding: 120px 0 60px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -135,9 +152,12 @@
     color: #ddd;
     margin-bottom: 40px;
     max-width: 800px;
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
     font-weight: 300;
+    z-index: 10;
+    position: relative;
+    text-align: center;
 }
 
 .ctaButton {
@@ -163,7 +183,7 @@
     box-shadow: 0 12px 30px rgba(255, 77, 0, 0.6);
 }
 
-.ctaButton   i {
+.ctaButton i {
     margin-left: 10px;
     transition: transform 0.3s ease;
 }
@@ -173,9 +193,9 @@
 }
 
 .carImages {
-    position: absolute;
-    bottom: 0;
+    position: relative;
     width: 100%;
+    max-width: 1400px;
     display: flex;
     justify-content: space-between;
     z-index: 2;
@@ -194,6 +214,11 @@
 
 .audiCar {
     transform: perspective(1000px) rotateY(15deg);
+    -moz-transform: skew(0deg, 2deg);
+    -webkit-transform: skew(0deg, 2deg);
+    -o-transform: skew(0deg, 2deg);
+    -ms-transform: skew(0deg, 2deg);
+    transform: skew(0deg, 2deg);
 }
 
 .bmwCar {
@@ -453,9 +478,9 @@ section:not(.hero-section):not(.section):not(.footer) img:last-of-type {
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 }
 
-.technicalDetailsSection .container {
+.technicalDetailsSection {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 100px auto;
     padding: 0 20px;
 }
 
@@ -1092,6 +1117,7 @@ section:not(.hero-section):not(.section):not(.footer) img:last-of-type {
 
 .comparisonTable {
     margin-top: 60px;
+
     overflow-x: auto;
 }
 
@@ -1101,10 +1127,10 @@ section:not(.hero-section):not(.section):not(.footer) img:last-of-type {
     margin-bottom: 20px;
     color: #333;
     text-align: center;
+
 }
 
 table {
-    width: 100%;
     border-collapse: collapse;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     border-radius: 10px;

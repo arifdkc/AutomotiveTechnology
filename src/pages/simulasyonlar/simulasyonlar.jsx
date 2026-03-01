@@ -1,52 +1,32 @@
 import React, { useState } from 'react';
-import styles from './blogs.module.css';
+import styles from './simulasyonlar.module.css';
 
-const Blogs = () => {
+const Simulasyonlar = () => {
+    const categoryLabels = {
+        'simülasyon': 'Simülasyon'
+    };
+
     // Sample blog data
     const blogPosts = [
         {
             id: 1,
-            title: "Audi quattro ve BMW xDrive Karşılaştırması",
-            excerpt: "Audi quattro mu BMW xDrive mi? Hangisi en iyi dört çeker sistemi? ",
-            category: "karşılaştırma",
+            title: "Piston Simülasyonu",
+            excerpt: "Piston simülasyonu, içten yanmalı motorların en temel parçalarından biri olan pistonun hareketini ve çalışma prensibini anlamak için kullanılır.",
+            category: "simülasyon",
             date: "15 Haziran 2025",
-            image: "/audi_and_bmw.png",
-            link: "/blogs/quattro-vs-xdrive"
+            image: "/piston_simulasyon.png",
+            link: "/simulasyonlar/piston-simulasyonu"
         },
         {
             id: 2,
-            title: "Otto motor nedir?",
-            excerpt: "Otto motor, içten yanmalı motorların en yaygın türlerinden biridir. Silindir içinde yakıt-hava karışımının sıkıştırılması ve ateşlenmesi prensibine dayanır.",
-            category: "nedir",
-            date: "10 Temmuz 2025",
-            image: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
-            link: "/blogs/otto"
-        },
-        {
-            id: 3,
-            title: "wankel motor nedir?",
-            excerpt: "Wankel motor, içten yanmalı motorların farklı bir türüdür. Silindir yerine rotor kullanır.",
-            category: "nedir",
-            date: "15 Temmuz 2025",
-            image: "/wankel-motor.png",
-            link: "/blogs/wankel"
-        },
-        {
-            id: 4,
-            title: "Yakıt Tasarrufu Rehberi",
-            excerpt: "Depoyu Daha Geç Boşaltmanın Sandığınızdan Daha Kolay Yolları",
-            category: "rehber",
-            date: "13 Şubat 2025",
-            image: "/tasaruf_img.png",
-            link: "/blogs/yakit_tasarrufu"
+            title: "Can Bus Simülasyonu",
+            excerpt: "Araç içi iletişim ağı olan CAN Bus sisteminin nasıl çalıştığını, veri paketlerinin nasıl iletildiğini ve bileşenlerin etkileşimini gösteren simülasyon.",
+            category: "simülasyon",
+            date: "1 Mart 2026",
+            image: "canbus.png",
+            link: "/simulasyonlar/can-simulator"
         }
     ];
-
-    const categoryLabels = {
-        'nedir': 'Nedir',
-        'karşılaştırma': 'Karşılaştırma',
-        'rehber': 'Rehber',
-    };
 
     const [activeFilter, setActiveFilter] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
@@ -63,8 +43,8 @@ const Blogs = () => {
             {/* Hero Section */}
             <section className={styles.hero}>
                 <div className="container">
-                    <h1>Otomotiv Teknolojileri Blog</h1>
-                    <p>Elektrikli araçlar, otonom sürüş, bağlantılı araç teknolojileri ve daha fazlası hakkında güncel bilgiler ve analizler.</p>
+                    <h1>Simülasyonlar</h1>
+                    <p>Otomotiv teknolojileriyle ilgili etkileşimli simülasyonları keşfedin ve sistemlerin nasıl çalıştığını öğrenin.</p>
                 </div>
             </section>
 
@@ -80,28 +60,10 @@ const Blogs = () => {
                             Tümü
                         </button>
                         <button
-                            className={`${styles.filterBtn} ${activeFilter === 'nedir' ? styles.active : ''}`}
-                            onClick={() => setActiveFilter('nedir')}
+                            className={`${styles.filterBtn} ${activeFilter === 'simülasyon' ? styles.active : ''}`}
+                            onClick={() => setActiveFilter('simülasyon')}
                         >
-                            Nedir
-                        </button>
-                        <button
-                            className={`${styles.filterBtn} ${activeFilter === 'karşılaştırma' ? styles.active : ''}`}
-                            onClick={() => setActiveFilter('karşılaştırma')}
-                        >
-                            Karşılaştırma
-                        </button>
-                        <button
-                            className={`${styles.filterBtn} ${activeFilter === 'haber' ? styles.active : ''}`}
-                            onClick={() => setActiveFilter('haber')}
-                        >
-                            Haberler
-                        </button>
-                        <button
-                            className={`${styles.filterBtn} ${activeFilter === 'rehber' ? styles.active : ''}`}
-                            onClick={() => setActiveFilter('rehber')}
-                        >
-                            Rehber
+                            Simülasyonlar
                         </button>
                     </div>
 
@@ -146,4 +108,4 @@ const Blogs = () => {
     );
 };
 
-export default Blogs;
+export default Simulasyonlar;

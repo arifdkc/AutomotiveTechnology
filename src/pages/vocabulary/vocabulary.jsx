@@ -80,7 +80,7 @@ const Vocabulary = () => {
         </div>
       </div>
 
-      <div className={style.container}>
+      <div className={style.gridContainer}>
         <div className={style.dictionaryGrid}>
           {filteredTerms.length > 0 ? (
             filteredTerms.map((term, index) => (

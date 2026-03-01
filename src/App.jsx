@@ -10,6 +10,11 @@ import Footer from './components/footer/Footer';
 import Blogs from './pages/blogs/blogs';
 import NotFound from './pages/404/404';
 import Yakit from './pages/yakıt_tasarufu/yakıt_tasarufu'
+import CanBus from './pages/canBus/CanBus';
+import CanSimulator from './pages/CanSimulator/CanSimulator';
+import Simulasyonlar from './pages/simulasyonlar/simulasyonlar';
+
+
 function App() {
   return (
     <Router>
@@ -18,14 +23,18 @@ function App() {
 
         <main className="content">
           <Routes>
+
             <Route path="/" element={<Home />} />
             <Route path="/blogs/otto" element={<Otto />} />
             <Route path="/blogs/wankel" element={<Wankel />} />
-            <Route path="/piston-simulasyonu" element={<Piston_sim />} />
+            <Route path="/simulasyonlar/piston-simulasyonu" element={<Piston_sim />} />
             <Route path="/blogs/quattro-vs-xdrive" element={<Awd />} />
             <Route path="/vocabulary" element={<Vocabulary />} />
             <Route path="/blogs/yakit_tasarrufu" element={<Yakit />} />
             <Route path="/blogs" element={<Blogs />} />
+            <Route path="/blogs/can-bus" element={<CanBus />} />
+            <Route path="/simulasyonlar/can-simulator" element={<CanSimulator />} />
+            <Route path="/simulasyonlar" element={<Simulasyonlar />} />
 
             <Route path="*" element={<NotFound />} />
           </Routes>

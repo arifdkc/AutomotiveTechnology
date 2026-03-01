@@ -19,7 +19,7 @@ const Home = () => { // Dosya adıyla uyumlu isim (Home) daha iyidir
 
       {/* Odak Alanları */}
       <section id="teknolojiler" className={styles.section}>
-        <div className={styles.container}>
+        <div className="container">
           <div className={styles.sectionTitle}>
             <h2>Odak Alanları</h2>
             <p>Sektörü dönüştüren temel mühendislik disiplinleri.</p>
@@ -51,7 +51,7 @@ const Home = () => { // Dosya adıyla uyumlu isim (Home) daha iyidir
 
       {/* Yazılım Bölümü */}
       <section id="yazilim" className={`${styles.section} ${styles.bgDarker}`}>
-        <div className={`${styles.container} ${styles.splitLayout}`}>
+        <div className={`container ${styles.splitLayout}`}>
           <div className={styles.splitImage}>
             <img src="/otomotiv_yazılımı.png" alt="Automotive Software" className={styles.responsiveImg} />
           </div>

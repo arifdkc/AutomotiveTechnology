@@ -26,11 +26,18 @@ header p {
 
 /* Arama Alanı */
 .searchContainer {
-    max-width: 600px;
+    max-width: 90%;
     margin: -30px auto 40px;
     padding: 0 20px;
     position: relative;
     z-index: 10;
+}
+
+.gridContainer {
+    max-width: 90%;
+    margin: 10px auto 100px;
+    padding: 0 20px;
+
 }
 
 .searchBox {
@@ -64,11 +71,7 @@ header p {
 }
 
 /* Kart Grid Yapısı */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
+
 
 .dictionaryGrid {
     display: grid;
@@ -100,6 +103,8 @@ header p {
     flex-direction: column;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
+
 }
 
 .vocabCard::before {

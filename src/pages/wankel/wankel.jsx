@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import styles from './wankel.module.css'; // CSS modülünü içe aktar
+import { NavLink } from 'react-router-dom';
+
 
 const Wankel = () => {
   // Eski script.js içindeki menü mantığını burada çalıştırmak istersen 
@@ -62,7 +64,7 @@ const Wankel = () => {
         <section className={styles.blueprintSection}>
           <div className={styles.blueprintBg}></div>
           {/* JSX'te z-index -> zIndex, inline style kullanımı */}
-          <div className={styles.container} style={{ position: 'relative', zIndex: 2 }}>
+          <div className={styles.container} style={{ position: 'relative', zIndex: 2, width: '90%', maxWidth: '1200px', margin: '0 auto', padding: '0 20px', marginTop: '50px' }}>
             <h2 className={styles.sectionTitle}>4 Zamanlı <span>Dairesel</span> Çevrim</h2>
 
 
@@ -126,14 +128,38 @@ const Wankel = () => {
         </div>
       </main>
 
-      <section className={styles.container}>
+      <section className={styles.vocabSection}>
         <h2>Technical Vocabulary (Sözlük)</h2>
         <div className={styles.vocabContainer}>
-          <div className={styles.vocabCard}>camshaft<br /><small>Eksantrik Mil</small></div>
-          <div className={styles.vocabCard}>Spark Plug<br /><small>Buji</small></div>
-          <div className={styles.vocabCard}>Stroke<br /><small>Zaman / Vuruş</small></div>
-          <div className={styles.vocabCard}>Efficiency<br /><small>Verimlilik</small></div>
+          <div className={styles.vocabCard}>
+            <NavLink to="/vocabulary">
+              <span>Camshaft</span>
+              <p>Eksantrik Mil</p>
+            </NavLink>
+          </div>
+
+          <div className={styles.vocabCard}>
+            <NavLink to="/vocabulary">
+              <span>Spark Plug</span>
+              <p>Buji</p>
+            </NavLink>
+          </div>
+
+          <div className={styles.vocabCard}>
+            <NavLink to="/vocabulary">
+              <span>Stroke</span>
+              <p>Zaman / Vuruş</p>
+            </NavLink>
+          </div>
+
+          <div className={styles.vocabCard}>
+            <NavLink to="/vocabulary">
+              <span>Efficiency</span>
+              <p>Verimlilik</p>
+            </NavLink>
+          </div>
         </div>
+
       </section>
     </div>
   );

@@ -84,12 +84,15 @@ const Simulation = () => {
         <button className={styles.btnStop} onClick={() => setIsRunning(false)}>Durdur</button>
         <button className={styles.btnStep} onClick={() => { setIsRunning(false); setAngle(a => (a + 15) % 720); updateEngineState(angle + 15); }}>
           Adım Adım (+15°)
+
         </button>
-        <label style={{ fontSize: "0.8em", color: "#aaa" }}>Hız:</label>
-        <input type="range" min="1" max="20" value={speed} onChange={(e) => setSpeed(e.target.value)} />
+        <div className={styles.speed}>
+          <label style={{ fontSize: "0.8em", color: "#aaa" }}>Hız:</label>
+          <input type="range" min="1" max="20" value={speed} onChange={(e) => setSpeed(e.target.value)} />
+        </div>
       </div>
       <div className={styles.mainContent}>
-
+        <div className={styles.dataDisplay}>Krank Açısı: <span id="angleDisplay">{angle} </span>°</div>
         <div className={styles.engineContainer}>
           <div className={styles.chamberBg} ref={chamberBgRef}></div>
 
@@ -110,12 +113,11 @@ const Simulation = () => {
         </div>
 
         <div className={styles.infoPanel}>
-          <div className={styles.strokeName} id="strokeName">Hazır</div>
-          <div className={styles.strokeDesc} id="strokeDesc">Simülasyonu başlatmak için butona basın.</div>
-          <div className={styles.dataDisplay}>Krank Açısı: <span id="angleDisplay">{angle} </span>°</div>
-          <div className={styles.dataDisplay}> <span id="strokeDisplay">{currentStroke.name} </span></div>
-          <div className={styles.dataDisplay}> <span id="strokeDisplay">{currentStroke.desc} </span></div>
+
+          <div className={styles.dataDisplay}> <span id="strokeDisplay">{currentStroke.name} </span> <span id="strokeDisplay">{currentStroke.desc} </span></div>
+
         </div>
+
       </div>
     </div>
   );

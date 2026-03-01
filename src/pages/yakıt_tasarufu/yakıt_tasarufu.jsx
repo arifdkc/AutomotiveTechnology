@@ -3,7 +3,7 @@ import styles from './yakıt_tasarufu.module.css';
 
 const YakitTasarrufu = () => {
     return (
-        <div className={styles.container}>
+        <div className="container">
             <header className={styles.header}>
                 <h1 className={styles.title}>🚗 Yakıt Tasarrufu Rehberi</h1>
                 <p className={styles.subtitle}>Aracınızı Değil, Sürüş Tarzınızı Değiştirin</p>
